@@ -45,7 +45,7 @@ export default class Controller {
     saveCardInMemory(form) {
         const card = form.getElementsByClassName('form__input').item(0);
         this.storage.cardsBox[card.dataset.id].push(card.value);
-        // this.storage.saveInlocalStorage();  
+        this.storage.saveInlocalStorage();  
         card.value = ''; 
     }
     
@@ -91,7 +91,7 @@ export default class Controller {
             const containerId = e.target.closest('[id]').id;
             const indexRemoveValue = this.storage.cardsBox[containerId].indexOf(valueRemoveElemet);
             this.storage.cardsBox[containerId].splice(indexRemoveValue, 1);
-            // this.storage.saveInlocalStorage();
+            this.storage.saveInlocalStorage();
             removeElemet.remove();
         }));  
     }
