@@ -6,7 +6,7 @@ export default class Controller {
     }
 
     init() {
-        // this.storage.getdataInlocalStorage();
+        this.storage.getdataInlocalStorage();
         this.elements.redrawCards(this.storage.cardsBox);
         this.clickListeners();
         this.mouseListeners();
