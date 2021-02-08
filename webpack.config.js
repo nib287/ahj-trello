@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const { sources } = require('webpack');
 
 module.exports = {
     entry: {
@@ -23,6 +24,7 @@ module.exports = {
         }),
     ],
     
+    devtool: 'source-map',
     devServer: {
         historyApiFallback: true,
         contentBase: path.resolve(__dirname, './dist'),

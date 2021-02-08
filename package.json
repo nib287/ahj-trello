@@ -4,9 +4,9 @@
   "main": "app.js",
   "license": "MIT",
   "scripts": {
-    "test": "jest",
+    "start": "webpack-dev-server",
     "coverage": "jest --coverage",
-    "build": "webpack --mode production",
+    "build": "webpack --mode development",
     "dev": "webpack --mode development",
     "lint": "eslint"
   },
