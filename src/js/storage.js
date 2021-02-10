@@ -12,8 +12,9 @@ export default class Storage {
     }
 
     getdataInlocalStorage() {
-        const data = JSON.parse(localStorage.data);
-        if(data) this.cardsBox = data;
+        const data = localStorage.data
+        
+        if(data) this.cardsBox = JSON.parse(localStorage.data);;
         
     }
 }
